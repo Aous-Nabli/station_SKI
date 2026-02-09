@@ -19,7 +19,7 @@ public class Sikeur {
     private Abonnement abonnement;
     @ManyToMany
     private List<Piste> piste ;
-    @OneToMany
+    @OneToMany(mappedBy = "sikeur")
     private List<Inscription> inscriptionss;
 
 }

@@ -14,7 +14,7 @@ public class Piste {
     @Enumerated(EnumType.STRING)
   Couleur couleur;
   int longueur;
-
-  @ManyToMany
+//mappedby la class la plus faible d'attiribut l plus faible )
+  @ManyToMany(mappedBy = "piste")
     private List<Sikeur> sikeur;
 }

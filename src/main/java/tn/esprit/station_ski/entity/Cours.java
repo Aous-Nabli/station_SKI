@@ -14,9 +14,8 @@ public class Cours {
     Support support ;
     Float prix ;
     int crenneau ;
-    @OneToMany
+    @OneToMany(mappedBy = "cours")
     private List<Inscription> inscription;
-    @ManyToOne
-    private Moniteur moniteur;
+
 
 }
