@@ -1,11 +1,10 @@
 package tn.esprit.station_ski.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 public class Moniteur {
     @Id
@@ -14,4 +13,8 @@ public class Moniteur {
     String nomM;
     String prenom;
     LocalDate dateRecu ;
+    @OneToMany
+    private List<Cours> cours;
+
+
 }

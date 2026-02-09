@@ -1,11 +1,9 @@
 package tn.esprit.station_ski.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Sikeur {
@@ -16,4 +14,12 @@ public class Sikeur {
     String prenomS;
     LocalDate dateNaisssance;
     String ville ;
+
+    @OneToOne
+    private Abonnement abonnement;
+    @ManyToMany
+    private List<Piste> piste ;
+    @OneToMany
+    private List<Inscription> inscriptionss;
+
 }

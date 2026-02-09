@@ -13,4 +13,8 @@ public class Abonnement {
     float prixAbbon;
     @Enumerated(EnumType.STRING)
     TypeAbonnement typeAbon;
+    @OneToOne
+    private Sikeur sikeur;
+
+
 }

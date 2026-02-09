@@ -1,9 +1,8 @@
 package tn.esprit.station_ski.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Cours {
@@ -15,5 +14,9 @@ public class Cours {
     Support support ;
     Float prix ;
     int crenneau ;
+    @OneToMany
+    private List<Inscription> inscription;
+    @ManyToOne
+    private Moniteur moniteur;
 
 }
