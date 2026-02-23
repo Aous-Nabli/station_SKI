@@ -1,5 +1,6 @@
 package tn.esprit.station_ski.service;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.station_ski.entity.Piste;
 import tn.esprit.station_ski.repository.IPisteRepo;
@@ -8,7 +9,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class PisteServiceImpl implements IPisteService {
+@AllArgsConstructor
+public abstract class PisteServiceImpl implements IPisteService {
         IPisteRepo pisteRepo;
 
     @Override

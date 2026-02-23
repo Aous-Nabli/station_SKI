@@ -1,6 +1,7 @@
 package tn.esprit.station_ski.controller;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.station_ski.entity.Piste;
 import tn.esprit.station_ski.service.IPisteService;
@@ -8,12 +9,13 @@ import tn.esprit.station_ski.service.IPisteService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/piste")  //  elle va etre comme ca : http://localhost:8080/piste/
+@RequestMapping("/piste")  //  elle va etre comme ca : http://localhost:8089/piste/
+@AllArgsConstructor
 public class PisteRestController {
     IPisteService pisteService;
 
     @PostMapping(path = "/")
-
+    //http://localhost:8089/user/
     Piste addPiste(@RequestBody Piste piste){  //RequestBody
         return pisteService.addPiste(piste) ;
     }

@@ -17,12 +17,12 @@ import java.util.List;
 public class Piste {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-  long numPiste ;
+    Long numPiste ;
 
   String nomPiste;
     @Enumerated(EnumType.STRING)
   Couleur couleur;
-  int longueur;
+    Integer longueur;
 //mappedby la class la plus faible d'attiribut l plus faible )   ( tous ce qui est biderectionnnel et mapping) ( mapped by fils dans la class fils  )
 
   @ManyToMany(mappedBy = "piste")

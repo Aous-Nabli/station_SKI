@@ -1,6 +1,7 @@
 package tn.esprit.station_ski.service;
 
 import tn.esprit.station_ski.entity.Piste;
+import tn.esprit.station_ski.entity.Sikeur;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface IPisteService {
     List<Piste> getAllPiste();
 
     Piste getPisteById(Long idPiste);
+
+    Piste addPisteAndAssignToPiste(Piste p , Long numPiste);
 }
